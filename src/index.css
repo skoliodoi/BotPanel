@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ag-header-cell-text {
+  flex: 1;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 30px;
+  aspect-ratio: 2.5;
+  --_g: no-repeat radial-gradient(farthest-side, #0090ff 90%, #0000);
+  background: var(--_g), var(--_g), var(--_g), var(--_g);
+  background-size: 20% 50%;
+  animation: l44 1s infinite linear alternate;
+}
+@keyframes l44 {
+  0%,
+  5% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  12.5% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  25% {
+    background-position:
+      calc(0 * 100% / 3) 0,
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+  37.5% {
+    background-position:
+      calc(0 * 100% / 3) 100%,
+      calc(1 * 100% / 3) 0,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 50%;
+  }
+  50% {
+    background-position:
+      calc(0 * 100% / 3) 100%,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 0,
+      calc(3 * 100% / 3) 0;
+  }
+  62.5% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 100%,
+      calc(2 * 100% / 3) 100%,
+      calc(3 * 100% / 3) 0;
+  }
+  75% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 100%,
+      calc(3 * 100% / 3) 100%;
+  }
+  87.5% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 100%;
+  }
+  95%,
+  100% {
+    background-position:
+      calc(0 * 100% / 3) 50%,
+      calc(1 * 100% / 3) 50%,
+      calc(2 * 100% / 3) 50%,
+      calc(3 * 100% / 3) 50%;
+  }
+}
+
+/* .ag-react-container {
+  border: 1px solid purple !important;
+  width: auto !important;
+  border-radius: 12px;
+} */
+
+.ag-header-cell {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ag-popup-child,
+.ag-popup-positioned-under {
+  border: 1px solid #075985 !important;
+  text-align: center !important;
+  border-radius: 0.375rem;
+  background-color: #e0f2fe;
+}
+
+.ag-header-cell-comp-wrapper {
+  display: flex;
+  justify-content: center;
+}
+/* .ag-menu {
+  display: flex;
+  justify-content: center;
+}
+.ag-header-cell {
+  border: 1px solid purple;
+  display: flex !important;
+  justify-content: center !important;
+}
+.ag-header-cell-menu-button {
+  border: 1px solid green;
+  display: flex !important;
+  justify-content: flex-start !important;
+} */
+
+.filter-icon-enter {
+  overflow: hidden;
+  animation: mymove 0.3s normal;
+}
+
+.filter-icon-initial {
+  display: none;
+  opacity: 0;
+}
+
+.filter-icon-exit {
+  overflow: hidden;
+  animation: myexit 0.3s normal;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes myexit {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
